@@ -14,7 +14,7 @@ def square (var)
     end
 end
 
-def check_square (array)
+def check_sum (array)
     case array
         when 1
             return true
@@ -28,4 +28,4 @@ def check_square (array)
     end
 end
 
-puts square 100
+##puts square 1000
