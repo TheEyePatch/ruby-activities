@@ -7,7 +7,7 @@ def square (var)
         if array.sum > 9
             return square (array.sum)
         else
-            check_square (array.sum) 
+            check_sum (array.sum) 
         end
     else
         false
@@ -28,4 +28,4 @@ def check_sum (array)
     end
 end
 
-##puts square 1000
+puts square 1000
