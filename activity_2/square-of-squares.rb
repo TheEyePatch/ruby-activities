@@ -12,4 +12,4 @@ def square (var)
     end
     
 end
-p square 100
+p square 100000
