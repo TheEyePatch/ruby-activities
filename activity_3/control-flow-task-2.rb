@@ -1,8 +1,7 @@
+# if (0..50) === 51
+#     p true
+# end
 
-
-if (0..50) === 51
-    p true
-end
 def check_number (num)
     if (0..50) === num
         return "#{num} is between 0 and 50"
