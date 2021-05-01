@@ -13,4 +13,4 @@ def check_arr (array, int)
     end
 end
 
-p check_arr arr, number
+p check_arr(arr, number)
