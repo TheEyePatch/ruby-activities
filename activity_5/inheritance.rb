@@ -12,14 +12,16 @@ module AdminPermisson
   end
   
   class User
-    
+
     def initialize(username, password, ip_address)
+        @username = username
         @ip_address = ip_address
+        @password = password
     end
 
     def change_password=(password)
         @password = password
-        puts "Password changed!"
+        p "Password changed!"
     end
   
     protected
@@ -59,5 +61,3 @@ module AdminPermisson
   buyer.buy
   
   buyer.change_password = 'new_password'
-
-
