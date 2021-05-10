@@ -1,3 +1,46 @@
+##===================== BAD INTERFACE-SEGREGATION =============
+# class RectangularPrism
+#     def initialize(length, width, height)
+#         @length = length
+#         @width = width
+#         @height = height
+#     end
+#     def perimeter_front
+#         total_surface_height + total_surface_width
+#     end
+#     def perimeter_side
+#        total_surface_length + total_surface_height
+#     end
+#     def perimeter_base
+#        total_surface_length + total_surface_width
+#     end
+#     def surface_area
+#         area_front() + area_sides() + area_base()
+#     end
+
+#     private
+#     def total_surface_width
+#         @width * 2
+#     end
+#     def total_surface_height
+#         @height * 2
+#     end
+#     def total_surface_length
+#         @length * 2
+#     end
+#     def area_front
+#         @width * @height
+#     end
+#     def area_sides
+#         @length * @height
+#     end
+#     def area_base
+#         @length * @width
+#     end
+    
+# end
+
+#================ WITH INTERFACE-SEGREGATION ==============
 class Prism
     def initialize(length, width, height)
         @length = length
@@ -17,7 +60,7 @@ class RectangularPrism < Prism
         Base.new(@length, @width).compute_perimeter()
     end
     def surface_area
-        Front.new(@height, @width).compute_area() + Side.new(@length, @width).compute_area() + Base.new(@length, @width).compute_area()
+        Front.new(@height, @width).compute_area() + Side.new(@length, @height).compute_area() + Base.new(@length, @width).compute_area()
     end
 end
 
@@ -81,8 +124,8 @@ class Base
 end
 
 
-# prism_one = RectangularPrism.new(10,30, 5)
-# p prism_one.perimeter_front()
-# p prism_one.perimeter_side()
-# p prism_one.perimeter_base()
-# p prism_one.surface_area()
+prism_one = RectangularPrism.new(10,30, 5)
+p prism_one.perimeter_front()
+p prism_one.perimeter_side()
+p prism_one.perimeter_base()
+p prism_one.surface_area()
