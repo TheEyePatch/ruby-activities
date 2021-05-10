@@ -82,14 +82,14 @@ class AreaCircle < Area
     end
 end
 
-# square_1 = Area.new('Square',20)
-# p square_1.compute_area()
+square_1 = Area.new('Square',20)
+p square_1.compute_area()
 
-# triangle_1 = Area.new('Triangle', 30, 60)
-# p triangle_1.compute_area()
+triangle_1 = Area.new('Triangle', 30, 60)
+p triangle_1.compute_area()
 
-# rectangle_1 = Area.new('Rectangle', 30, 10)
-# p rectangle_1.compute_area()
+rectangle_1 = Area.new('Rectangle', 30, 10)
+p rectangle_1.compute_area()
 
-# circle_1 = Area.new('Circle', 10)
-# p circle_1.compute_area()
+circle_1 = Area.new('Circle', 10)
+p circle_1.compute_area()
