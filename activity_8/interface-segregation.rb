@@ -60,7 +60,7 @@ class RectangularPrism < Prism
         Base.new(@length, @width).compute_perimeter()
     end
     def surface_area
-        Front.new(@height, @width).compute_area() + Side.new(@length, @height).compute_area() + Base.new(@length, @width).compute_area()
+        SurfaceArea.new(@length, @width, @height).compute_surface_area()
     end
 end
 
@@ -120,6 +120,26 @@ class Base
     end
     def total_surface_width
         @width * 2
+    end
+end
+class SurfaceArea
+    def initialize(length, width, height)
+        @length = length
+        @width = width
+        @height = height
+    end
+    def compute_surface_area
+        area_front() + area_sides() + area_base()
+    end
+    private
+    def area_front
+        Front.new(@height, @width).compute_area()
+    end
+    def area_sides
+        Side.new(@length, @height).compute_area()
+    end
+    def area_base
+        Base.new(@length, @width).compute_area()
     end
 end
 
