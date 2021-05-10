@@ -1,3 +1,40 @@
+#================== BAD CODE (WITHOUT OPEN-CLOSED)
+# class Area
+#     def initialize(shape,length, width = 1)
+#         @shape = shape
+#         @length = length
+#         @width = width
+#     end
+#     def compute_area
+#         case @shape
+#         when 'Square'
+#             compute_area_square()
+#         when 'Triangle'
+#             compute_area_triangle()
+#         when 'Rectangle'
+#             compute_area_rectangle()
+#         when 'Circle'
+#             compute_area_circle()
+#         end
+#     end
+#     private
+#     def compute_area_square
+#         @length **2
+#     end
+#     def compute_area_triangle
+#         (@length * @width)/2
+#     end
+#     def compute_area_rectangle
+#         @length * @width
+#     end
+#     def compute_area_circle
+#         pi = Math::PI
+#         (@length**2) * pi
+#     end
+# end
+
+##================== WITH OPEN-CLOSED =============#
+
 class Area
     def initialize(shape,length, width = 1)
         @shape = shape
