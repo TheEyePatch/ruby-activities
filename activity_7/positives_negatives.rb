@@ -1,5 +1,6 @@
 arr = [1,2,3,4,5,6,7,8,9,10,-11,-12,-13,-14, -15]
 array =[1]
+
 def count_positives_sum_negatives(lst)
     #your code here
     counter = 0
@@ -16,5 +17,3 @@ def count_positives_sum_negatives(lst)
     end
     return output
 end
-p count_positives_sum_negatives(arr)
-p count_positives_sum_negatives(array)
