@@ -2,7 +2,7 @@ require 'product'
 
 describe "Product" do
     it "should return zero if any num is zero" do
-        expect(get_product(0, 5)).to eq(0)
+        expect(get_product(1, 0)).to eq(0)
     end
     it "should return the number if multiplied by one" do
         expect(get_product(1, 5)).to eq(5)
@@ -26,4 +26,4 @@ describe "Product" do
     it "should return product of -10 and -20 number" do
         expect(get_product(-20, -1)).to eq(20)
     end
-  end
+end

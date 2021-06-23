@@ -1,7 +1,9 @@
 
 def get_product(a,b)
-    if (0..1) === b
+    if 1 == b
         return a 
+    elsif 0 == b
+        return 0
     elsif -1 === b
         return -a 
     elsif b < -1
@@ -11,7 +13,7 @@ def get_product(a,b)
     end
 end
 
-# spec/product_spec.rb
+# spec/product_spec/
 
 # describe "Product" do
 #     it "should return zero if any num is zero" do
